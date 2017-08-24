@@ -46,8 +46,9 @@ router.post("/edit", function(req, res){
     installTime:req.body.installTime,
     cost: req.body.cost,
     source: req.body.source,
-    // styles: {color: req.body.color, length: req.body.length}
-  }).then(function(hair){
+    styles: {color: req.body.color, length: req.body.length}
+  },
+).then(function(hair){
     res.redirect("/");
   })
 });
