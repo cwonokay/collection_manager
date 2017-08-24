@@ -1,0 +1,15 @@
+<div >
+  <form  action="/" method="post">
+    {{#hairTypes}}
+    <input type="text" name="name" placeholder="Hair Type">
+    <input type="text" name="installTime" placeholder="Install Time">
+    <input type="text" name="cost" placeholder="Cost">
+    <input type="text" name="source" placeholder="Source">
+      {{#styles}}
+    <input type="text" name="color" placeholder="Color">
+    <input type="text" name="length" placeholder="length">
+     {{/styles}}
+    <button type="submit" name="button" value="{{_id}}">Submit</button>
+    {{/hairTypes}}
+  </form>
+</div>

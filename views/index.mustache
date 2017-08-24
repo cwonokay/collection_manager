@@ -1,0 +1,27 @@
+<div >
+  <form  action="/edit" method="post">
+    <input type="text" name="name" placeholder="Hair Type">
+    <input type="text" name="installTime" placeholder="Install Time">
+    <input type="text" name="cost" placeholder="Cost">
+    <input type="text" name="color" placeholder="Color">
+    <input type="text" name="length" placeholder="length">
+    <input type="text" name="source" placeholder="Source">
+    <button type="submit" name="button">Submit</button>
+  </form>
+</div>
+
+<h1>Hair Love Collection</h1>
+
+{{#hairTypes}}
+<form action="/{{_id}}/delete" method="post">
+  <button type="submit">Delete</button>
+</form>
+<p><a href="/{{_id}}/edit">Edit</a></p>
+<p>Hair Type: {{name}}
+  Install Time: {{installTime}}
+  Cost:{{cost}}</p>
+  {{#styles}}
+<p>Color: {{color}}
+  Length: {{length}}</p>
+  {{/styles}}
+{{/hairTypes}}
